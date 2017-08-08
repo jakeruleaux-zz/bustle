@@ -1,7 +1,6 @@
-<h2>{{story.headline}}</h2>
-<img src="{{story.image}}">
-{{story.author}}
-{{story.content}}
-
-
-{{#link-to 'index'}}Home{{/link-to}}
+<div class="container">
+  <h2>{{story.headline}}</h2>
+  <img src="{{story.image}}">
+  <p>By {{story.author}}</p>
+  <p>{{story.content}}</p>
+</div>
