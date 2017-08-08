@@ -3,6 +3,7 @@
 <ul>
   {{#each model as |story|}}
   <li>
+    {{update-story story=story update="update" }}
     {{story-tile story=story destroyStory="destroyStory"}}
     <button {{action 'delete' story}}>Delete</button>
   </li>
