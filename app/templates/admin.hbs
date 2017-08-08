@@ -1,7 +1,14 @@
 <h1>Authorized personnel only!</h1>
 
+<ul>
+  {{#each model as |story|}}
+  <li>
+    {{story-tile story=story destroyStory="destroyStory"}}
+    <button {{action 'delete' story}}>Delete</button>
+  </li>
+  {{/each}}
+</ul>
+
 {{new-story saveStory="saveStory"}}
-
-
 
 {{#link-to 'index'}}Home{{/link-to}}
