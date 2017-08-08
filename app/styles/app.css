@@ -2,7 +2,21 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
+
 .head {
+  border-style: solid;
   border-width: thin;
   border-color: black;
+}
+
+.cp-Panel-toggle {
+  color: pink;
+}
+
+li {
+  list-style: none;
 }

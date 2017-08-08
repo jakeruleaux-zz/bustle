@@ -1,20 +1,29 @@
 <div class= "container">
   <header class= "head">
-    <h1>BustleClone</h1>
-    {{#cp-panel as |p|}}
-  {{#p.toggle}}
-    <p>Menu</p>
-  {{/p.toggle}}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id=menuDrop>
+          {{#cp-panel as |p|}}
+          {{#p.toggle}}
+          <p>Menu</p>
+          {{/p.toggle}}
 
-  {{#p.body}}
-    <div>
-      {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}<br>
-      {{#link-to 'about'}}About{{/link-to}}<br>
-      {{#link-to 'admin'}}Admin{{/link-to}}<br>
-      {{#link-to 'index'}}Home{{/link-to}}
+          {{#p.body}}
+          <div>
+            {{#link-to 'contact'}}Contact{{/link-to}}<br>
+            {{#link-to 'about'}}About{{/link-to}}<br>
+            {{#link-to 'admin'}}Admin{{/link-to}}<br>
+            {{#link-to 'index'}}Home{{/link-to}}
+          </div>
+          {{/p.body}}
+          {{/cp-panel}}
+
+        </div>
+        <div class="col-md-9">
+          <h1>BustleClone</h1>
+        </div>
+      </div>
     </div>
-  {{/p.body}}
-{{/cp-panel}}
   </header>
     {{outlet}}
   <hr>
