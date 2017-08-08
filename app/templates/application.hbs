@@ -1,13 +1,24 @@
 <div class= "container">
-  <header class= "jumbotron">
+  <header class= "head">
     <h1>BustleClone</h1>
+    {{#cp-panel as |p|}}
+  {{#p.toggle}}
+    <p>Menu</p>
+  {{/p.toggle}}
+
+  {{#p.body}}
+    <div>
+      {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}<br>
+      {{#link-to 'about'}}About{{/link-to}}<br>
+      {{#link-to 'admin'}}Admin{{/link-to}}<br>
+      {{#link-to 'index'}}Home{{/link-to}}
+    </div>
+  {{/p.body}}
+{{/cp-panel}}
   </header>
     {{outlet}}
   <hr>
   <footer>
-    {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}
-    {{#link-to 'about'}}About{{/link-to}}
-    {{#link-to 'admin'}}Admin{{/link-to}}
-    {{#link-to 'index'}}Home{{/link-to}}
+
   </footer>
 </div>
