@@ -2,5 +2,11 @@
 
 <h2>All the news that you need to know!</h2>
 
+<ul>
+  {{#each model as |story|}}
+    <li>{{story.image}} <br> {{story.headline}} <br> By {{story.author}}</li>
+  {{/each}}
+</ul>
+
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
